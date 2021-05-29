@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp2
+  labels:
+    name: myapp2
+    app: exercicioInfra
+spec:
+  containers:
+  - name: myapp2
+    image: mysql:5.0
+    ports:
+          - containerPort: 3306
+
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
